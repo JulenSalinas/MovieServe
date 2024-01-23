@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera MovieServe</title>
+    <meta charset = "utf-8"/> 
+    <link rel = "icon" href =  
+    "F:\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" 
+            type = "image/x-icon"> 
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .Logo {
+            text-align: center;
+            grid-column: 1/1;
+            grid-row: 1/1;
+            padding: 20px;
+            border: 3px solid #000000;
+            background-image: url('cine5.jpg');
+        }
+
+        .Logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .menu {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-item {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.6s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #8a8989;
+        }
+
+        .contenido {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            flex: 1;
+        }
+        footer{
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            padding-bottom: 1px;
+            text-align: center;
+        }
+  
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        
+        <div class="Logo">
+            <img src="F:\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" alt="Logo de MovieServe">
+        </div>
+
+        <div class="menu">
+            <a href="index.html" class="menu-item">Inicio</a>
+            <a href="reservas.html" class="menu-item">Reservas</a>
+            <a href="ayuda.html" class="menu-item">Ayuda</a>
+        </div>
+
+        
+    
+        <div class="contenido">
+            <table style="width:100%">
+                <tr>
+                  <td><img src="F:\RETO2\HTML MovieServe\imágenes/peli1.jpg" height="300px" width="300px"/></td>
+                  <td><img src="F:\RETO2\HTML MovieServe\imágenes/peli2.jpg" height="300px" width="300px"/></td>
+                  <td><img src="F:\RETO2\HTML MovieServe\imágenes/peli3.jpg" height="300px" width="300px"/></td>
+                  
+                </tr>
+              </table>
+        </div>
+    </div>
+        <footer>
+            <p>&copy; MovieServe, Reserva y Ven</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

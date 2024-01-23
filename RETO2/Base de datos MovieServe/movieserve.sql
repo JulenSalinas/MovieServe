@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-01-2024 a las 10:34:54
+-- Tiempo de generación: 23-01-2024 a las 09:22:44
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,6 +45,7 @@ CREATE TABLE `clientes` (
   `Telefono` varchar(150) NOT NULL,
   `Nombre` varchar(120) NOT NULL,
   `Apellido` varchar(120) NOT NULL,
+  `DNI` varchar(9) NOT NULL,
   `Gmail` varchar(180) NOT NULL,
   `id_Sala` int(11) NOT NULL,
   `id_Pelicula` int(11) NOT NULL
@@ -72,7 +73,6 @@ CREATE TABLE `peliculas` (
 CREATE TABLE `reservas` (
   `idReserva` int(11) NOT NULL,
   `FechaResrva` date NOT NULL,
-  `Hora` varchar(80) NOT NULL,
   `CantPersonas` int(11) NOT NULL,
   `id_Cliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

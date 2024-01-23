@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-01-2024 a las 10:34:54
+-- Tiempo de generación: 22-01-2024 a las 13:39:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,6 +45,7 @@ CREATE TABLE `clientes` (
   `Telefono` varchar(150) NOT NULL,
   `Nombre` varchar(120) NOT NULL,
   `Apellido` varchar(120) NOT NULL,
+  `DNI` varchar(9) NOT NULL,
   `Gmail` varchar(180) NOT NULL,
   `id_Sala` int(11) NOT NULL,
   `id_Pelicula` int(11) NOT NULL

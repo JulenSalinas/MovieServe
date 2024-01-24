@@ -6,7 +6,7 @@
     <title>Cartelera MovieServe</title>
     <meta charset = "utf-8"/> 
     <link rel = "icon" href =  
-    "F:\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" 
+    "\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" 
             type = "image/x-icon"> 
     <style>
         body {
@@ -72,7 +72,46 @@
             padding-bottom: 1px;
             text-align: center;
         }
-  
+        
+        td{
+            border: 2px solid #000000;
+        }
+        .imagen-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .imagen-hover:hover {
+            transform: scale(1.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        td, th {
+            border: 2px solid #000000;
+            padding: 10px;
+            text-align: center;
+        }       
+
+        th {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+        tr:first-child {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        td:hover {
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -80,7 +119,7 @@
     <div class="main">
         
         <div class="Logo">
-            <img src="F:\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" alt="Logo de MovieServe">
+            <img src="\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" alt="Logo de MovieServe">
         </div>
 
         <div class="menu">
@@ -92,14 +131,29 @@
         
     
         <div class="contenido">
-            <table style="width:100%">
+            <h1><u>Nuestra Cartelera del mes de Febrero</u></h1>
+            <table>
                 <tr>
-                  <td><img src="F:\RETO2\HTML MovieServe\imágenes/peli1.jpg" height="300px" width="300px"/></td>
-                  <td><img src="F:\RETO2\HTML MovieServe\imágenes/peli2.jpg" height="300px" width="300px"/></td>
-                  <td><img src="F:\RETO2\HTML MovieServe\imágenes/peli3.jpg" height="300px" width="300px"/></td>
-                  
+                    <td><a href="peli1.html"><img src="\RETO2\HTML MovieServe\imágenes/peli1.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli2.html"><img src="\RETO2\HTML MovieServe\imágenes/peli2.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli3.html"><img src="\RETO2\HTML MovieServe\imágenes/peli3.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli4.html"><img src="\RETO2\HTML MovieServe\imágenes/peli4.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
                 </tr>
-              </table>
+               
+                <tr>
+                    <td><a href="peli5.html"><img src="\RETO2\HTML MovieServe\imágenes/peli5.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli6.html"><img src="\RETO2\HTML MovieServe\imágenes/peli6.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli7.html"><img src="\RETO2\HTML MovieServe\imágenes/peli7.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli8.html"><img src="\RETO2\HTML MovieServe\imágenes/peli8.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                </tr>
+                
+                <tr>
+                    <td><a href="peli9.html"><img src="\RETO2\HTML MovieServe\imágenes/peli9.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli10.html"><img src="\RETO2\HTML MovieServe\imágenes/peli10.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli11.html"><img src="\RETO2\HTML MovieServe\imágenes/peli11.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                    <td><a href="peli12.html"><img src="\RETO2\HTML MovieServe\imágenes/peli12.jpg" height="300px" width="300px" class="imagen-hover"/></a></td>
+                </tr>
+            </table>
         </div>
     </div>
         <footer>

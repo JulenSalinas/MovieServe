@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-01-2024 a las 09:22:44
+-- Tiempo de generación: 24-01-2024 a las 10:31:16
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -47,6 +47,8 @@ CREATE TABLE `clientes` (
   `Apellido` varchar(120) NOT NULL,
   `DNI` varchar(9) NOT NULL,
   `Gmail` varchar(180) NOT NULL,
+  `peliculaAVer` text NOT NULL,
+  `cantidadAsientos` int(11) NOT NULL,
   `id_Sala` int(11) NOT NULL,
   `id_Pelicula` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -63,6 +65,24 @@ CREATE TABLE `peliculas` (
   `Duracion` int(11) NOT NULL,
   `Titulo` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `peliculas`
+--
+
+INSERT INTO `peliculas` (`idPelicula`, `Genero`, `Duracion`, `Titulo`) VALUES
+(1, 'Fantasía', 120, 'El regreso de Jaava'),
+(2, 'Aventura', 90, 'La BakQ perdida'),
+(3, 'Comedia', 101, 'Las Aventuras de Inti: El duende de Garbera'),
+(4, 'Tragedia', 87, 'Tamayo:El escape'),
+(5, 'Thriller psicológico', 150, 'Programación eterna'),
+(6, 'Suspense', 98, 'El gasto'),
+(7, 'Terror', 134, 'Asesinato en la máquina virtual'),
+(8, 'Drama', 79, 'El Break'),
+(9, 'Suspense', 92, 'La ley prohibida'),
+(10, 'Comedia', 102, 'El arte de la doma clásica'),
+(11, 'Fantasía', 84, 'El Wuekii'),
+(12, 'Terror', 138, 'El trén de vuelta');
 
 -- --------------------------------------------------------
 
@@ -110,6 +130,20 @@ CREATE TABLE `reservas_salas` (
 CREATE TABLE `salas` (
   `idSala` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `salas`
+--
+
+INSERT INTO `salas` (`idSala`) VALUES
+(1),
+(2),
+(3),
+(4),
+(5),
+(6),
+(7),
+(8);
 
 -- --------------------------------------------------------
 
@@ -206,7 +240,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `peliculas`
 --
 ALTER TABLE `peliculas`
-  MODIFY `idPelicula` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPelicula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
@@ -230,7 +264,7 @@ ALTER TABLE `reservas_salas`
 -- AUTO_INCREMENT de la tabla `salas`
 --
 ALTER TABLE `salas`
-  MODIFY `idSala` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idSala` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `salas_peliculas`
@@ -253,7 +287,7 @@ ALTER TABLE `asientos`
 -- Filtros para la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_Pelicula`) REFERENCES `peliculas` (`idPelicula`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `reservas`
@@ -274,12 +308,6 @@ ALTER TABLE `reservas_pelicula`
 ALTER TABLE `reservas_salas`
   ADD CONSTRAINT `reservas_salas_ibfk_1` FOREIGN KEY (`idReserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reservas_salas_ibfk_2` FOREIGN KEY (`idSala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `salas`
---
-ALTER TABLE `salas`
-  ADD CONSTRAINT `salas_ibfk_1` FOREIGN KEY (`idSala`) REFERENCES `clientes` (`id_Sala`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `salas_peliculas`

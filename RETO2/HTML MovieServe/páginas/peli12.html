@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio MovieServe</title>
+    <title>El trén de vuelta</title>
     <meta charset = "utf-8"/> 
     <link rel = "icon" href =  
     "\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" 
@@ -64,31 +65,8 @@
             background-color: #ffffff;
             border-radius: 10px;
             flex: 1;
+            border: 4px solid rgb(0, 0, 0);
         }
-
-        section {
-            display: flex;
-            width: 800px;
-            height: 430px;
-            margin: 0 auto;
-            border: 3px solid #000000;
-   
-  }
-        section img {
-            width: 20px;
-            flex-grow: 1;
-            object-fit: cover;
-            filter: brightness(150%);
-            transition: .5s ease;
-            padding-left: 0px;
-    
-  }
-        section img:hover{
-            cursor: crosshair;
-            width: 700px;
-            opacity: 1;
-            filter: brightness(150%);
-  }
         footer{
             background-color: #000;
             color: #fff;
@@ -96,18 +74,30 @@
             padding-bottom: 1px;
             text-align: center;
         }
-        div descripcion p{
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            color: rgb(0, 0, 0);
+        .imagen{
+            float: left;
+            height:300px;
+            width:300px;
+            border: 4px solid rgb(0, 0, 0);
         }
-        
-        .descripcion{
-            background-color: rgb(236, 227, 227);
-            border: 3px solid #000000; 
+        .textos{
+            float: left;
+            margin-left: 110px;
+            height:300px;
+            width:300px;
+            border: 2px solid rgb(0, 0, 0);
         }
-
+        .sinopsis{
+           float: right;
+            height:300px;
+            width:300px;
+            border: 2px solid rgb(0, 0, 0);
+        }
+        .sinopsis p{
+            font-family: monospace;
+            font-size: 16px;
+            padding: 10px;
+        }
     </style>
 </head>
 
@@ -119,35 +109,29 @@
         </div>
 
         <div class="menu">
-            <a href="cartelera.html" class="menu-item">Cartelera</a>
+            <a href="index.html" class="menu-item">Inicio</a>
+            <a href="cartelera.html" class="menu-item"> Cartelera</a>
             <a href="reservas.html" class="menu-item">Reservas</a>
             <a href="ayuda.html" class="menu-item">Ayuda</a>
         </div>
-
-        
-    
+        <br>
         <div class="contenido">
-            <div class="descripcion">
-            <h1><u>Bienvenidos a MovieServe</u></h1>
-            <p> <b>MovieServe es una empresa dedicada a proyectar películas de alta calidad. En este cine tenemos 8 salas pequeñas y 2 grandes con una capacidad máxima de 260 personas. </p>
-            <br>
-               <p>Como la gente compra con antelación los tickets de modo online, solo deberán venir a la hora indicada y ponerse a la fila.</p>
-            <br>
-               <p> Una persona encargada de mirar los tickets te permitirá acceder al establecimiento. En el mismo momento un trabajador del cine se encargará de acomodarte en el sitio correspondido. A la hora indicada se iniciará la película establecida.</b></p>
+            <div class="imagen">
+            <img src="\RETO2\HTML MovieServe\imágenes/peli12.jpg" height="300px" width="300px"/>
             </div>
-            <br>
-               <section>
-                <img src="\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png">
-                <img src="\RETO2\HTML MovieServe\imágenes/cine1.jpg">
-                <img src="\RETO2\HTML MovieServe\imágenes/cine2.jpg">
-                <img src="\RETO2\HTML MovieServe\imágenes/cine3.jpg">
-                <img src="\RETO2\HTML MovieServe\imágenes/cine4.jpg">
-            </section>
-
-            <img src="\RETO2\HTML MovieServe\imágenes/logoCamara.jpg" height="300px" width="300px"></img>
-            <img src="\RETO2\HTML MovieServe\imágenes/logoPalomitas.jpg" height="300px" width="300px"></img>
-        
+            <div class="textos">
+                <h2>El trén de vuelta</h2>
+                <h3>Duracción:</h3> <p>138 min</p>
+                <h3>Género</h3> <p>Terror</p>
+                <h3>Apto para:</h3> <p>Mayores de 16 años</p>
+            </div>
+         <div class="sinopsis">
+            <h3>Sinopsis:</h3> <p>En "El Tren de Vuelta", los pasajeros de un tren nocturno se ven atrapados en un viaje interminable donde cada vagón desata sus peores miedos. A medida que luchan por escapar, descubren un oscuro secreto que amenaza con consumirlos. ¿Lograrán sobrevivir antes de que el tren los lleve más allá de sus peores pesadillas?</p>
+         </div>
+    
         </div>
+       
+    </div>
         <footer>
             <p>&copy; MovieServe, Reserva y Ven</p>
         </footer>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-01-2024 a las 10:31:16
+-- Tiempo de generación: 26-01-2024 a las 10:50:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -52,6 +52,14 @@ CREATE TABLE `clientes` (
   `id_Sala` int(11) NOT NULL,
   `id_Pelicula` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`idCliente`, `Telefono`, `Nombre`, `Apellido`, `DNI`, `Gmail`, `peliculaAVer`, `cantidadAsientos`, `id_Sala`, `id_Pelicula`) VALUES
+(12, '+1233265', 'Maria', 'Dominguez', '10394876T', 'mari@gmail.eus', 'La BakQ perdida', 1, 4, 2),
+(13, '+436456456', 'Paco', 'Rodriguez', '19836367N', 'paco@gmail.com', 'La BakQ perdida', 3, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -234,7 +242,7 @@ ALTER TABLE `asientos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `peliculas`
@@ -280,14 +288,15 @@ ALTER TABLE `salas_peliculas`
 -- Filtros para la tabla `asientos`
 --
 ALTER TABLE `asientos`
-  ADD CONSTRAINT `asientos_ibfk_1` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `asientos_ibfk_2` FOREIGN KEY (`id_Reserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `asientos_ibfk_1` FOREIGN KEY (`id_Reserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `asientos_ibfk_2` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`id_Pelicula`) REFERENCES `peliculas` (`idPelicula`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `reservas`
@@ -299,8 +308,8 @@ ALTER TABLE `reservas`
 -- Filtros para la tabla `reservas_pelicula`
 --
 ALTER TABLE `reservas_pelicula`
-  ADD CONSTRAINT `reservas_pelicula_ibfk_1` FOREIGN KEY (`idReserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reservas_pelicula_ibfk_2` FOREIGN KEY (`idPelicula`) REFERENCES `peliculas` (`idPelicula`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `reservas_pelicula_ibfk_1` FOREIGN KEY (`idPelicula`) REFERENCES `peliculas` (`idPelicula`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reservas_pelicula_ibfk_2` FOREIGN KEY (`idReserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `reservas_salas`

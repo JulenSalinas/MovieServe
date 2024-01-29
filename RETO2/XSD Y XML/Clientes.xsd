@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1" xml:lang="es">
+    <xs:element name="Clientes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Telefono">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="^[9|6|7][0-9]{8}$"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="Nombre" type = "xs:string"/>
+                <xs:element name="Apellido" type = "xs:string"/>
+
+                <xs:element name="DNI">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:string">
+                            <xs:pattern value="[0-9]{8}[A-Z]"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Gmail">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:string">
+                            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="pelicula">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name ="peliculaAVer">
+                                <xs:simpleType>
+                                    <xs:restriction base ="xs:string">
+                                        <xs:enumeration value="El regreso de Jaava"/>
+                                        <xs:enumeration value="La BakQ perdida"/>
+                                        <xs:enumeration value="Las aventuras de Inti: El duende de Garbera"/>
+                                        <xs:enumeration value="Tamayo:El escape"/>
+                                        <xs:enumeration value="Programación eterna"/>
+                                        <xs:enumeration value="El gasto"/>
+                                        <xs:enumeration value="Asesinato en la máquina virtual"/>
+                                        <xs:enumeration value="El Break"/>
+                                        <xs:enumeration value="La ley prohibida"/>
+                                        <xs:enumeration value="El arte de la doma clásica"/>
+                                        <xs:enumeration value="El Wuekii"/>
+                                        <xs:enumeration value="El trén de vuelta"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:all>
+                        <xs:attribute name ="Genero" type ="generoType"/>
+                        <xs:attribute name ="Duracion" type ="duracionType"/>
+                    </xs:complexType>
+                </xs:element>
+                  
+
+                <xs:element name ="cantidadAsientos">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:integer">
+                            <xs:minExclusive value="0"/>
+                            <xs:maxInclusive value="260"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+
+                </xs:element>
+                <xs:element name ="id_Sala">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:integer">
+                            <xs:minExclusive value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="id_Pelicula">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:integer">
+                            <xs:minExclusive value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+         <xs:attribute name="idCliente" type ="idclienteType"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="idclienteType">
+        <xs:restriction base="xs:integer"> 
+          <xs:minExclusive value="0"/>
+        </xs:restriction>
+      </xs:simpleType>
+
+      <xs:simpleType name="generoType">
+        <xs:restriction base="xs:string"> 
+          <xs:enumeration value="El regreso de Jaava"/>
+          <xs:enumeration value="La BakQ perdida"/>
+          <xs:enumeration value="Las Aventuras de Inti: El duende de Garbera"/>
+          <xs:enumeration value="Tamayo:El escape"/>
+          <xs:enumeration value="Programación eterna"/>
+          <xs:enumeration value="El gasto"/>
+          <xs:enumeration value="Asesinato en la máquina virtual"/>
+          <xs:enumeration value="El Break"/>
+          <xs:enumeration value="La ley prohibida"/>
+          <xs:enumeration value="El arte de la doma clásica"/>
+          <xs:enumeration value="El Wuekii"/>
+          <xs:enumeration value="El trén de vuelta"/>
+
+        </xs:restriction>
+      </xs:simpleType>
+
+      <xs:simpleType name="duracionType">
+        <xs:restriction base="xs:integer"> 
+          <xs:minInclusive value="60"/>
+        </xs:restriction>
+      </xs:simpleType>
+</xs:schema>

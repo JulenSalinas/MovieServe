@@ -6,7 +6,7 @@
     <title>Reservas</title>
     <meta charset = "utf-8"/> 
     <link rel = "icon" href =  
-    "\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" 
+    "LogoMovieServe.png" 
             type = "image/x-icon"> 
             <style>
                 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -179,8 +179,20 @@
  </style>
 </head>
 <body>
+  <script>
+    function validarFormulario() {
+        var y=document.forms["formulario"]["condiciones"].checked;
+
+        if (y == false) {
+            alert("Tienes que aceptar los términos y condiciones");
+            return false;
+        }
+
+    }
+
+</script>
     <div class="Logo">
-        <img src="\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" alt="Logo de MovieServe">
+        <img src="LogoMovieServe.png" alt="Logo de MovieServe">
     </div>
     
       
@@ -196,7 +208,7 @@
     <div class="text">
        ¡Reserva ya para ver tu página favorita!
     </div>
-    <form name="formulario" method="get" action="http://192.168.1.18/insert.php" onsubmit="return validarFormulario()">
+    <form name="formulario" method="get" action="http://34.204.90.181/reservar.php" onsubmit="return validarFormulario()">
        <div class="form-row">
         <input type="hidden" name="db" value ="movieserve">
         <input type="hidden" name="table" value ="clientes">
@@ -252,13 +264,7 @@
         </select> 
         </div>
      </div>
-     <div class="form-row">
-        <div class="input-data">
-            <input type="hidden" name="id_Sala">
-            <input type="hidden" name="id_Pelicula>
-           <div class="underline"></div>
-        
-        </div>
+     
        <div class="form-row">
        <div class="input-data textarea">
         
@@ -277,5 +283,12 @@
            <input type="submit" value="Validar">
         </div>
      </div>
+     <div class="form-row">
+      <div class="input-data">
+          <input type="hidden" name="id_Sala">
+          <input type="hidden" name="id_Pelicula">
+         <div class="underline"></div>
+      
+      </div>
 </body>
 </html>

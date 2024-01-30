@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientes  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Clientes.xsd">
+    <cliente idCliente = "1">
+        <Telefono>653419603</Telefono>
+        <Nombre>Paco</Nombre>
+        <Apellido>Gutierrez</Apellido>
+        <DNI>19391645P</DNI>
+        <Gmail>paco@gmail.com</Gmail>
+        <pelicula Genero = "Terror" Duracion = "134" id_Pelicula = "7">
+            <peliculaAVer>Asesinato en la máquina virtual</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>5</cantidadAsientos>
+            <id_Sala>4</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "2">
+        <Telefono>618534289</Telefono>
+        <Nombre>Eugenia</Nombre>
+        <Apellido>Dominguez</Apellido>
+        <DNI>00816387E</DNI>
+        <Gmail>dominguez@gmail.com</Gmail>
+        <pelicula Genero = "Aventura" Duracion = "90" id_Pelicula = "2">
+            <peliculaAVer>La BakQ perdida</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>2</cantidadAsientos>
+            <id_Sala>7</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "3">
+        <Telefono>610035701</Telefono>
+        <Nombre>Claudia</Nombre>
+        <Apellido>Gutierrez</Apellido>
+        <DNI>12389013B</DNI>
+        <Gmail>guti@gmail.com</Gmail>
+        <pelicula Genero = "Suspense" Duracion = "92" id_Pelicula = "9">
+            <peliculaAVer>La ley prohibida</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>1</cantidadAsientos>
+            <id_Sala>1</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "4">
+        <Telefono>609863401</Telefono>
+        <Nombre>Clara</Nombre>
+        <Apellido>Navarro</Apellido>
+        <DNI>98156329U</DNI>
+        <Gmail>navarro@gmail.com</Gmail>
+        <pelicula Genero = "Drama" Duracion = "79" id_Pelicula = "8">
+            <peliculaAVer>El Break</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>4</cantidadAsientos>
+            <id_Sala>1</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "5">
+        <Telefono>611826432</Telefono>
+        <Nombre>Miguel</Nombre>
+        <Apellido>Moreno</Apellido>
+        <DNI>12973970V</DNI>
+        <Gmail>miguel@gmail.com</Gmail>
+        <pelicula Genero = "Fantasía" Duracion = "120" id_Pelicula = "1">
+            <peliculaAVer>El regreso de Jaava</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>3</cantidadAsientos>
+            <id_Sala>2</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "6">
+        <Telefono>652910351</Telefono>
+        <Nombre>Emilio</Nombre>
+        <Apellido>Abichuela</Apellido>
+        <DNI>10238447A</DNI>
+        <Gmail>abichu@gmail.com</Gmail>
+        <pelicula Genero = "Fantasía" Duracion = "84" id_Pelicula = "11">
+            <peliculaAVer>El Wuekii</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>6</cantidadAsientos>
+            <id_Sala>5</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "7">
+        <Telefono>619926745</Telefono>
+        <Nombre>Luna</Nombre>
+        <Apellido>Perez</Apellido>
+        <DNI>44789135T</DNI>
+        <Gmail>luna@gmail.com</Gmail>
+        <pelicula Genero = "Thriller psicológico" Duracion = "150" id_Pelicula = "5">
+            <peliculaAVer>Programación eterna</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>3</cantidadAsientos>
+            <id_Sala>3</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "8">
+        <Telefono>639910835</Telefono>
+        <Nombre>Erling</Nombre>
+        <Apellido>Haaland</Apellido>
+        <DNI>27729189S</DNI>
+        <Gmail>erling@gmail.com</Gmail>
+        <pelicula Genero = "Suspense" Duracion = "98" id_Pelicula = "6">
+            <peliculaAVer>El gasto</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>4</cantidadAsientos>
+            <id_Sala>8</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "9">
+        <Telefono>623091742</Telefono>
+        <Nombre>Sergio</Nombre>
+        <Apellido>Ramos</Apellido>
+        <DNI>57659201D</DNI>
+        <Gmail>mushoarte@gmail.com</Gmail>
+        <pelicula Genero = "Fantasía" Duracion = "84" id_Pelicula = "11">
+            <peliculaAVer>El Wuekii</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>1</cantidadAsientos>
+            <id_Sala>4</id_Sala>
+    </cliente>
+
+    <cliente idCliente = "10">
+        <Telefono>639830913</Telefono>
+        <Nombre>Alberto</Nombre>
+        <Apellido>Chicote</Apellido>
+        <DNI>88727112J</DNI>
+        <Gmail>croquetas@gmail.com</Gmail>
+        <pelicula Genero = "Terror" Duracion = "138" id_Pelicula = "12">
+            <peliculaAVer>El trén de vuelta</peliculaAVer>
+        </pelicula>
+            <cantidadAsientos>1</cantidadAsientos>
+            <id_Sala>1</id_Sala>
+    </cliente>
+
+
+</clientes>

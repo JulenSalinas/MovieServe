@@ -176,6 +176,14 @@
     color:white
   }
 
+  .horario a{
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
  </style>
 </head>
 <body>
@@ -208,7 +216,7 @@
     <div class="text">
        ¡Reserva ya para ver tu página favorita!
     </div>
-    <form name="formulario" method="get" action="http://34.204.90.181/reservar.php" onsubmit="return validarFormulario()">
+    <form name="formulario" method="get" action="reservar.php" onsubmit="return validarFormulario()">
        <div class="form-row">
         <input type="hidden" name="db" value ="movieserve">
         <input type="hidden" name="table" value ="clientes">
@@ -238,9 +246,9 @@
        </div>
        <div class="form-row">
         <div class="input-data">
-           <input type="text" name = "Gmail" required>
+           <input type="text" name = "Email" required>
            <div class="underline"></div>
-           <label for="">Gmail</label>
+           <label for="">Email</label>
         </div>
         <div class="input-data">
           <br>
@@ -274,9 +282,12 @@
           <div class="underline"></div>
           <label for="">Cantidad de Asientos:</label>
           <br/>
-          
+          <div class="horario">
+            <a href="https://drive.google.com/file/d/1aykNRaxzo50NeebBvch9_e77tLnpxJ51/view?usp=sharing"><b>Horario</b></a>
+          </div>
     </form>
     </div>
+
     <div class="form-row submit-btn">
         <div class="input-data">
            <div class="inner" ></div>
@@ -288,7 +299,8 @@
           <input type="hidden" name="id_Sala">
           <input type="hidden" name="id_Pelicula">
          <div class="underline"></div>
-      
       </div>
+      <br>
+      
 </body>
 </html>

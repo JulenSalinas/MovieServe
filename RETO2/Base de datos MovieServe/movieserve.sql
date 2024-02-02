@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-01-2024 a las 10:50:17
+-- Tiempo de generación: 02-02-2024 a las 11:42:26
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -46,7 +46,7 @@ CREATE TABLE `clientes` (
   `Nombre` varchar(120) NOT NULL,
   `Apellido` varchar(120) NOT NULL,
   `DNI` varchar(9) NOT NULL,
-  `Gmail` varchar(180) NOT NULL,
+  `Email` varchar(180) NOT NULL,
   `peliculaAVer` text NOT NULL,
   `cantidadAsientos` int(11) NOT NULL,
   `id_Sala` int(11) NOT NULL,
@@ -57,9 +57,8 @@ CREATE TABLE `clientes` (
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`idCliente`, `Telefono`, `Nombre`, `Apellido`, `DNI`, `Gmail`, `peliculaAVer`, `cantidadAsientos`, `id_Sala`, `id_Pelicula`) VALUES
-(12, '+1233265', 'Maria', 'Dominguez', '10394876T', 'mari@gmail.eus', 'La BakQ perdida', 1, 4, 2),
-(13, '+436456456', 'Paco', 'Rodriguez', '19836367N', 'paco@gmail.com', 'La BakQ perdida', 3, 2, 2);
+INSERT INTO `clientes` (`idCliente`, `Telefono`, `Nombre`, `Apellido`, `DNI`, `Email`, `peliculaAVer`, `cantidadAsientos`, `id_Sala`, `id_Pelicula`) VALUES
+(19, '+436456456', 'Jose', 'Moruinho', '19836367N', 'mou@gmail.com', 'El trén de vuelta', 2, 4, 12);
 
 -- --------------------------------------------------------
 
@@ -242,7 +241,7 @@ ALTER TABLE `asientos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `peliculas`

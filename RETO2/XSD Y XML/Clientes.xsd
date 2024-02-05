@@ -66,6 +66,7 @@
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
+                            <xs:element name ="Fecha" type = "xs:date"/>
                         </xs:sequence>
                         <xs:attribute name="idCliente" type ="idclienteType" use ="required"/>
                     </xs:complexType>

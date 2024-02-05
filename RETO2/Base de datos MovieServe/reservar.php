@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $email = $_GET["Email"];
     $peliculaAVer = $_GET["peliculaAVer"];
     $cantidadAsientos = $_GET["cantidadAsientos"];
+    $fecha = $_GET["Fecha"];
 
     // Asignar automáticamente un id_Pelicula según la opción seleccionada
     $id_Sala = 0; // Valor predeterminado si no se selecciona ninguna opción
@@ -122,8 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     
 
     // Preparar la consulta SQL para la inserción
-    $sql = "INSERT INTO clientes (Telefono, Nombre, Apellido, DNI, Email, PeliculaAVer, CantidadAsientos, id_Pelicula, id_Sala) 
-            VALUES ('$telefono', '$nombre', '$apellido', '$dni', '$email', '$peliculaAVer', '$cantidadAsientos', '$id_Pelicula', '$id_Sala')";
+    $sql = "INSERT INTO clientes (Telefono, Nombre, Apellido, DNI, Email, PeliculaAVer, CantidadAsientos,Fecha,id_Pelicula, id_Sala) 
+            VALUES ('$telefono', '$nombre', '$apellido', '$dni', '$email', '$peliculaAVer', '$cantidadAsientos','$fecha','$id_Pelicula', '$id_Sala')";
 
     // Ejecutar la consulta
     if ($conn->query($sql) === TRUE) {

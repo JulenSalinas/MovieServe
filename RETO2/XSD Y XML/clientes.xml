@@ -6,10 +6,11 @@
         <Apellido>Gutierrez</Apellido>
         <DNI>19391645P</DNI>
         <Gmail>paco@gmail.com</Gmail>
-        <pelicula Genero = "Terror" Duracion = "134" id_Sala ="3" id_Pelicula = "7">
+        <pelicula Genero = "Terror" Duracion = "134" id_Sala ="7" id_Pelicula = "7">
             <peliculaAVer>Asesinato en la máquina virtual</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>5</cantidadAsientos>
+        <cantidadAsientos>5</cantidadAsientos>
+        <Fecha>2024-02-03</Fecha>
     </cliente>
 
     <cliente idCliente = "2">
@@ -18,10 +19,11 @@
         <Apellido>Dominguez</Apellido>
         <DNI>00816387E</DNI>
         <Gmail>dominguez@gmail.com</Gmail>
-        <pelicula Genero = "Aventura" Duracion = "90"  id_Sala ="7" id_Pelicula = "2">
+        <pelicula Genero = "Aventura" Duracion = "90"  id_Sala ="2" id_Pelicula = "2">
             <peliculaAVer>La BakQ perdida</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>2</cantidadAsientos>
+        <cantidadAsientos>2</cantidadAsientos>
+        <Fecha>2024-02-05</Fecha>
     </cliente>
 
     <cliente idCliente = "3">
@@ -30,10 +32,11 @@
         <Apellido>Gutierrez</Apellido>
         <DNI>12389013B</DNI>
         <Gmail>guti@gmail.com</Gmail>
-        <pelicula Genero = "Suspense" Duracion = "92" id_Sala ="2" id_Pelicula = "9">
+        <pelicula Genero = "Suspense" Duracion = "92" id_Sala ="1" id_Pelicula = "9">
             <peliculaAVer>La ley prohibida</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>1</cantidadAsientos>
+        <cantidadAsientos>1</cantidadAsientos>
+        <Fecha>2024-02-06</Fecha>
     </cliente>
 
     <cliente idCliente = "4">
@@ -42,10 +45,11 @@
         <Apellido>Navarro</Apellido>
         <DNI>98156329U</DNI>
         <Gmail>navarro@gmail.com</Gmail>
-        <pelicula Genero = "Drama" Duracion = "79" id_Sala ="1" id_Pelicula = "8">
+        <pelicula Genero = "Drama" Duracion = "79" id_Sala ="8" id_Pelicula = "8">
             <peliculaAVer>El Break</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>4</cantidadAsientos>
+        <cantidadAsientos>4</cantidadAsientos>
+        <Fecha>2024-02-03</Fecha>
     </cliente>
 
     <cliente idCliente = "5">
@@ -54,10 +58,11 @@
         <Apellido>Moreno</Apellido>
         <DNI>12973970V</DNI>
         <Gmail>miguel@gmail.com</Gmail>
-        <pelicula Genero = "Fantasía" Duracion = "120" id_Sala ="8" id_Pelicula = "1">
+        <pelicula Genero = "Fantasía" Duracion = "120" id_Sala ="1" id_Pelicula = "1">
             <peliculaAVer>El regreso de Jaava</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>3</cantidadAsientos>
+        <cantidadAsientos>3</cantidadAsientos>
+        <Fecha>2024-02-08</Fecha>
     </cliente>
 
     <cliente idCliente = "6">
@@ -66,10 +71,11 @@
         <Apellido>Abichuela</Apellido>
         <DNI>10238447A</DNI>
         <Gmail>abichu@gmail.com</Gmail>
-        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="6" id_Pelicula = "11">
+        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="3" id_Pelicula = "11">
             <peliculaAVer>El Wuekii</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>6</cantidadAsientos>
+        <cantidadAsientos>6</cantidadAsientos>
+        <Fecha>2024-02-04</Fecha>
     </cliente>
 
     <cliente idCliente = "7">
@@ -81,7 +87,8 @@
         <pelicula Genero = "Thriller psicológico" Duracion = "150" id_Sala ="5" id_Pelicula = "5">
             <peliculaAVer>Programación eterna</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>3</cantidadAsientos>
+        <cantidadAsientos>3</cantidadAsientos>
+        <Fecha>2024-02-05</Fecha>
     </cliente>
 
     <cliente idCliente = "8">
@@ -90,10 +97,11 @@
         <Apellido>Haaland</Apellido>
         <DNI>27729189S</DNI>
         <Gmail>erling@gmail.com</Gmail>
-        <pelicula Genero = "Suspense" Duracion = "98" id_Sala ="4" id_Pelicula = "6">
+        <pelicula Genero = "Suspense" Duracion = "98" id_Sala ="6" id_Pelicula = "6">
             <peliculaAVer>El gasto</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>4</cantidadAsientos>
+        <cantidadAsientos>4</cantidadAsientos>
+        <Fecha>2024-02-07</Fecha>
     </cliente>
 
     <cliente idCliente = "9">
@@ -102,10 +110,11 @@
         <Apellido>Ramos</Apellido>
         <DNI>57659201D</DNI>
         <Gmail>mushoarte@gmail.com</Gmail>
-        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="7" id_Pelicula = "11">
+        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="3" id_Pelicula = "11">
             <peliculaAVer>El Wuekii</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>1</cantidadAsientos>
+        <cantidadAsientos>1</cantidadAsientos>
+        <Fecha>2024-02-06</Fecha>
     </cliente>
 
     <cliente idCliente = "10">
@@ -114,10 +123,11 @@
         <Apellido>Chicote</Apellido>
         <DNI>88727112J</DNI>
         <Gmail>croquetas@gmail.com</Gmail>
-        <pelicula Genero = "Terror" Duracion = "138" id_Sala ="2" id_Pelicula = "12">
+        <pelicula Genero = "Terror" Duracion = "138" id_Sala ="4" id_Pelicula = "12">
             <peliculaAVer>El trén de vuelta</peliculaAVer>
         </pelicula>
-            <cantidadAsientos>1</cantidadAsientos>
+        <cantidadAsientos>1</cantidadAsientos>
+        <Fecha>2024-02-09</Fecha>
     </cliente>
 
 

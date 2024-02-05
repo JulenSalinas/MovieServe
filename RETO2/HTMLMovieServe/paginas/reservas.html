@@ -175,7 +175,21 @@
   a{
     color:white
   }
+  .form-row {
+            position: relative;
+        }
 
+        .input-data input[type="date"] {
+            padding-top: 15px; /* Ajuste para la altura del campo de fecha */
+        }
+
+        .input-data label {
+            position: absolute;
+            pointer-events: none;
+            bottom: 45px; /* Ajuste para la posición de la etiqueta de fecha */
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
   .horario a{
     background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
     -webkit-background-clip: text;
@@ -183,7 +197,12 @@
     text-decoration: none;
     font-size: 25px;
   }
+  .submit-btn .input-data {
+    overflow: hidden;
+    height: 50px!important; 
+    width: 500px!important;
 
+}
  </style>
 </head>
 <body>
@@ -209,12 +228,13 @@
         <li><a href="index.html" class="menu-item">Inicio</a></li>
         <br>
         <li><a href="cartelera.html" class="menu-item">Cartelera</a></li>
+        <br>
         <li><a href="ayuda.html" class="menu-item">Ayuda</a></li>
     </div>
 
 <div class="container">
     <div class="text">
-       ¡Reserva ya para ver tu página favorita!
+       ¡Reserva ya para ver tu película favorita!
     </div>
     <form name="formulario" method="get" action="reservar.php" onsubmit="return validarFormulario()">
        <div class="form-row">
@@ -273,27 +293,32 @@
         </div>
      </div>
      
-       <div class="form-row">
-       <div class="input-data textarea">
-        
-         
-          <br/>
-          <input type="interger" name = "cantidadAsientos" required>
+     <div class="form-row">
+      <div class="input-data">
+          <input type="number" name="cantidadAsientos" required>
           <div class="underline"></div>
           <label for="">Cantidad de Asientos:</label>
-          <br/>
-          <div class="horario">
-            <a href="https://drive.google.com/file/d/1aykNRaxzo50NeebBvch9_e77tLnpxJ51/view?usp=sharing"><b>Horario</b></a>
-          </div>
-    </form>
-    </div>
+      </div>
+  </div>
 
-    <div class="form-row submit-btn">
-        <div class="input-data">
-           <div class="inner" ></div>
-           <input type="submit" value="Validar">
-        </div>
-     </div>
+  <div class="form-row">
+    <div class="input-data">
+        <input type="date" name="Fecha" required>
+        <div class="underline"></div>
+        <label for="Fecha">Fecha</label>
+    </div>
+</div>
+<div class="form-row submit-btn">
+  <div class="input-data">
+      <div class="inner"></div>
+      <input type="submit" value="Comprar">
+  </div>
+</div>
+  <div class="horario">
+      <a href="https://drive.google.com/file/d/1aykNRaxzo50NeebBvch9_e77tLnpxJ51/view?usp=sharing"><b>Horario</b></a>
+  </div>
+
+  
      <div class="form-row">
       <div class="input-data">
           <input type="hidden" name="id_Sala">
@@ -301,6 +326,6 @@
          <div class="underline"></div>
       </div>
       <br>
-      
+    </form>
 </body>
 </html>

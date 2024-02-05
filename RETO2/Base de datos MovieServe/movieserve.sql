@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2024 a las 11:42:26
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 03-02-2024 a las 18:44:22
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,16 +49,10 @@ CREATE TABLE `clientes` (
   `Email` varchar(180) NOT NULL,
   `peliculaAVer` text NOT NULL,
   `cantidadAsientos` int(11) NOT NULL,
+  `Fecha` date NOT NULL,
   `id_Sala` int(11) NOT NULL,
   `id_Pelicula` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `clientes`
---
-
-INSERT INTO `clientes` (`idCliente`, `Telefono`, `Nombre`, `Apellido`, `DNI`, `Email`, `peliculaAVer`, `cantidadAsientos`, `id_Sala`, `id_Pelicula`) VALUES
-(19, '+436456456', 'Jose', 'Moruinho', '19836367N', 'mou@gmail.com', 'El trén de vuelta', 2, 4, 12);
 
 -- --------------------------------------------------------
 
@@ -90,43 +84,6 @@ INSERT INTO `peliculas` (`idPelicula`, `Genero`, `Duracion`, `Titulo`) VALUES
 (10, 'Comedia', 102, 'El arte de la doma clásica'),
 (11, 'Fantasía', 84, 'El Wuekii'),
 (12, 'Terror', 138, 'El trén de vuelta');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `reservas`
---
-
-CREATE TABLE `reservas` (
-  `idReserva` int(11) NOT NULL,
-  `FechaResrva` date NOT NULL,
-  `CantPersonas` int(11) NOT NULL,
-  `id_Cliente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `reservas_pelicula`
---
-
-CREATE TABLE `reservas_pelicula` (
-  `idReservas_Pelicula` int(11) NOT NULL,
-  `idReserva` int(11) NOT NULL,
-  `idPelicula` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `reservas_salas`
---
-
-CREATE TABLE `reservas_salas` (
-  `idReservas_Salas` int(11) NOT NULL,
-  `idReserva` int(11) NOT NULL,
-  `idSala` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -191,29 +148,6 @@ ALTER TABLE `peliculas`
   ADD PRIMARY KEY (`idPelicula`);
 
 --
--- Indices de la tabla `reservas`
---
-ALTER TABLE `reservas`
-  ADD PRIMARY KEY (`idReserva`),
-  ADD KEY `id_Cliente` (`id_Cliente`);
-
---
--- Indices de la tabla `reservas_pelicula`
---
-ALTER TABLE `reservas_pelicula`
-  ADD PRIMARY KEY (`idReservas_Pelicula`),
-  ADD KEY `idPelicula` (`idPelicula`),
-  ADD KEY `idReserva` (`idReserva`);
-
---
--- Indices de la tabla `reservas_salas`
---
-ALTER TABLE `reservas_salas`
-  ADD PRIMARY KEY (`idReservas_Salas`),
-  ADD KEY `idReserva` (`idReserva`),
-  ADD KEY `idSala` (`idSala`);
-
---
 -- Indices de la tabla `salas`
 --
 ALTER TABLE `salas`
@@ -250,24 +184,6 @@ ALTER TABLE `peliculas`
   MODIFY `idPelicula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT de la tabla `reservas`
---
-ALTER TABLE `reservas`
-  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `reservas_pelicula`
---
-ALTER TABLE `reservas_pelicula`
-  MODIFY `idReservas_Pelicula` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `reservas_salas`
---
-ALTER TABLE `reservas_salas`
-  MODIFY `idReservas_Salas` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `salas`
 --
 ALTER TABLE `salas`
@@ -287,7 +203,6 @@ ALTER TABLE `salas_peliculas`
 -- Filtros para la tabla `asientos`
 --
 ALTER TABLE `asientos`
-  ADD CONSTRAINT `asientos_ibfk_1` FOREIGN KEY (`id_Reserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `asientos_ibfk_2` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -296,26 +211,6 @@ ALTER TABLE `asientos`
 ALTER TABLE `clientes`
   ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_Sala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`id_Pelicula`) REFERENCES `peliculas` (`idPelicula`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `reservas`
---
-ALTER TABLE `reservas`
-  ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`idCliente`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `reservas_pelicula`
---
-ALTER TABLE `reservas_pelicula`
-  ADD CONSTRAINT `reservas_pelicula_ibfk_1` FOREIGN KEY (`idPelicula`) REFERENCES `peliculas` (`idPelicula`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reservas_pelicula_ibfk_2` FOREIGN KEY (`idReserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `reservas_salas`
---
-ALTER TABLE `reservas_salas`
-  ADD CONSTRAINT `reservas_salas_ibfk_1` FOREIGN KEY (`idReserva`) REFERENCES `reservas` (`idReserva`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reservas_salas_ibfk_2` FOREIGN KEY (`idSala`) REFERENCES `salas` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `salas_peliculas`

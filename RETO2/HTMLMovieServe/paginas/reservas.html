@@ -218,12 +218,12 @@
     }
 
 </script>
-    <div class="Logo">
+    <div class="Logo"> <!--clase en la que se encuentra el logo-->
         <img src="LogoMovieServe.png" alt="Logo de MovieServe">
     </div>
     
       
-    <div class="menu">
+    <div class="menu"> <!--clase donde estan los accesos al resto de paginas-->
             
         <li><a href="index.html" class="menu-item">Inicio</a></li>
         <br>
@@ -232,40 +232,40 @@
         <li><a href="ayuda.html" class="menu-item">Ayuda</a></li>
     </div>
 
-<div class="container">
+<div class="container"> <!--clase donde se encuentra todo el formulario-->
     <div class="text">
        ¡Reserva ya para ver tu película favorita!
     </div>
-    <form name="formulario" method="get" action="reservar.php" onsubmit="return validarFormulario()">
+    <form name="formulario" method="get" action="reservar.php" onsubmit="return validarFormulario()"> <!--esto conecta el formulario con el archivo reservar.php-->
        <div class="form-row">
         <input type="hidden" name="db" value ="movieserve">
         <input type="hidden" name="table" value ="clientes">
         <input type="hidden" name="idCliente">
-          <div class="input-data">
+          <div class="input-data"> <!--en este div esta el campo telefono del formulario-->
              <input type="text" name = "Telefono"required>
              <div class="underline"></div>
              <label for="">Telefono</label>
           </div>
-          <div class="input-data">
+          <div class="input-data"><!--en este div esta el campo nombre del formulario-->
              <input type="text" name = "Nombre" required>
              <div class="underline"></div>
              <label for="">Nombre</label>
           </div>
        </div>
        <div class="form-row">
-          <div class="input-data">
+          <div class="input-data"><!--en este div esta el campo apellido del formulario-->
              <input type="text" name = "Apellido" required>
              <div class="underline"></div>
              <label for="">Apellido</label>
           </div>
-          <div class="input-data">
+          <div class="input-data"><!--en este div esta el campo DNI del formulario-->
              <input type="text" name = "DNI" required>
              <div class="underline"></div>
              <label for="">DNI</label>
           </div>
        </div>
        <div class="form-row">
-        <div class="input-data">
+        <div class="input-data"><!--en este div esta el campo email del formulario-->
            <input type="text" name = "Email" required>
            <div class="underline"></div>
            <label for="">Email</label>
@@ -273,9 +273,9 @@
         <div class="input-data">
           <br>
            <div class="underline"></div>
-           <label for="peliculaAVer">Película a Ver:</label>
+           <label for="peliculaAVer">Película a Ver:</label><!--en este label esta el campo de las peliculas que hay en el formulario-->
            <select id="peliculaAVer" name="peliculaAVer">
-       
+              <!-- aqui aparecen todas las opciones que hay-->
            <option value="El regreso de Jaava">El regreso de Jaava</option>
            <option value="La BakQ perdida">La BakQ perdida</option>
            <option value="Las aventuras de Inti: El duende de Garbera">Las aventuras de Inti: El duende de Garbera</option>
@@ -288,13 +288,13 @@
            <option value="El arte de la doma clásica">El arte de la doma clásica</option>
            <option value="El Wuekii">El Wuekii</option>
            <option value="El trén de vuelta">El trén de vuelta</option>
-         
+            
         </select> 
         </div>
      </div>
      
      <div class="form-row">
-      <div class="input-data">
+      <div class="input-data"><!--en este div esta el campo cantidad de asientos del formulario-->
           <input type="number" name="cantidadAsientos" required>
           <div class="underline"></div>
           <label for="">Cantidad de Asientos:</label>
@@ -302,7 +302,7 @@
   </div>
 
   <div class="form-row">
-    <div class="input-data">
+    <div class="input-data"><!--en este div esta el campo fecha del formulario-->
         <input type="date" name="Fecha" required>
         <div class="underline"></div>
         <label for="Fecha">Fecha</label>
@@ -310,11 +310,11 @@
 </div>
 <div class="form-row submit-btn">
   <div class="input-data">
-      <div class="inner"></div>
+      <div class="inner"></div><!--en este div esta el boton de comprar del formulario-->
       <input type="submit" value="Comprar">
   </div>
 </div>
-  <div class="horario">
+  <div class="horario"><!--en este div esta el link para ver el horario del cine-->
       <a href="https://drive.google.com/file/d/1aykNRaxzo50NeebBvch9_e77tLnpxJ51/view?usp=sharing"><b>Horario</b></a>
   </div>
 

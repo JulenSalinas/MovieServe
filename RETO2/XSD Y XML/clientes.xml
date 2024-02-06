@@ -1,134 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <clientes  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Clientes.xsd">
-    <cliente idCliente = "1">
-        <Telefono>653419603</Telefono>
-        <Nombre>Paco</Nombre>
-        <Apellido>Gutierrez</Apellido>
-        <DNI>19391645P</DNI>
-        <Gmail>paco@gmail.com</Gmail>
-        <pelicula Genero = "Terror" Duracion = "134" id_Sala ="7" id_Pelicula = "7">
-            <peliculaAVer>Asesinato en la máquina virtual</peliculaAVer>
+    <!--Arriba ponemos la primera línea de cualquier archivo xml, debajo de esta indicamos a que esquema xsd se concecta y abrimos la etiqueta padre llamada clientes-->
+    <cliente idCliente = "21">
+        <Telefono>+97291730</Telefono> <!--Algunos datos de teléfono llevan un + para ver que se puede introducir de tal manera, en cambio hay otros que no por el mismo echo-->
+        <Nombre>Paco</Nombre> <!--Insertamos el nombre Paco-->
+        <Apellido>Alcacer</Apellido><!--Insertamos el apellido Alcacer-->
+        <DNI>28635151S</DNI> <!--Insertamos el DNI-->
+        <Email>alcacer@hotmail.es</Email> <!--Insertamos el Correo-->
+        <pelicula Genero = "Drama" Duracion = "79" id_Sala ="8" id_Pelicula = "8"> <!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El Break</peliculaAVer> <!--Insertamos el nombre de la película-->
         </pelicula>
-        <cantidadAsientos>5</cantidadAsientos>
-        <Fecha>2024-02-03</Fecha>
+        <cantidadAsientos>4</cantidadAsientos> <!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-07</Fecha> <!--Insertamos la fecha-->
     </cliente>
 
-    <cliente idCliente = "2">
-        <Telefono>618534289</Telefono>
-        <Nombre>Eugenia</Nombre>
-        <Apellido>Dominguez</Apellido>
-        <DNI>00816387E</DNI>
-        <Gmail>dominguez@gmail.com</Gmail>
-        <pelicula Genero = "Aventura" Duracion = "90"  id_Sala ="2" id_Pelicula = "2">
-            <peliculaAVer>La BakQ perdida</peliculaAVer>
+    <cliente idCliente = "22">
+        <Telefono>+97291731</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Gabriel</Nombre><!--Insertamos el nombre Gabriel-->
+        <Apellido>Jesus</Apellido><!--Insertamos el apellido Jesus-->
+        <DNI>28635154T</DNI> <!--Insertamos el DNI-->
+        <Email>gabriel@hotmail.com</Email> <!--Insertamos el Correo-->
+        <pelicula Genero = "Aventura" Duracion = "90"  id_Sala ="2" id_Pelicula = "2"> <!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>La BakQ perdida</peliculaAVer> <!--Insertamos el nombre de la película-->
         </pelicula>
-        <cantidadAsientos>2</cantidadAsientos>
-        <Fecha>2024-02-05</Fecha>
+        <cantidadAsientos>2</cantidadAsientos> <!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-09</Fecha> <!--Insertamos la fecha-->
     </cliente>
 
-    <cliente idCliente = "3">
-        <Telefono>610035701</Telefono>
-        <Nombre>Claudia</Nombre>
-        <Apellido>Gutierrez</Apellido>
-        <DNI>12389013B</DNI>
-        <Gmail>guti@gmail.com</Gmail>
-        <pelicula Genero = "Suspense" Duracion = "92" id_Sala ="1" id_Pelicula = "9">
-            <peliculaAVer>La ley prohibida</peliculaAVer>
+    <cliente idCliente = "23">
+        <Telefono>+982470091</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Berta</Nombre><!--Insertamos el nombre Berta-->
+        <Apellido>Escobar</Apellido><!--Insertamos el apellido Escobar-->
+        <DNI>20018938E</DNI><!--Insertamos el DNI-->
+        <Email>gescobar@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Terror" Duracion = "134" id_Sala ="7" id_Pelicula = "7"> <!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>Asesinato en la máquina virtual</peliculaAVer><!--Insertamos el nombre de la película-->
         </pelicula>
-        <cantidadAsientos>1</cantidadAsientos>
-        <Fecha>2024-02-06</Fecha>
+        <cantidadAsientos>7</cantidadAsientos><!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-06</Fecha><!--Insertamos la fecha-->
     </cliente>
 
-    <cliente idCliente = "4">
-        <Telefono>609863401</Telefono>
-        <Nombre>Clara</Nombre>
-        <Apellido>Navarro</Apellido>
-        <DNI>98156329U</DNI>
-        <Gmail>navarro@gmail.com</Gmail>
-        <pelicula Genero = "Drama" Duracion = "79" id_Sala ="8" id_Pelicula = "8">
-            <peliculaAVer>El Break</peliculaAVer>
-        </pelicula>
-        <cantidadAsientos>4</cantidadAsientos>
-        <Fecha>2024-02-03</Fecha>
-    </cliente>
-
-    <cliente idCliente = "5">
-        <Telefono>611826432</Telefono>
-        <Nombre>Miguel</Nombre>
-        <Apellido>Moreno</Apellido>
-        <DNI>12973970V</DNI>
-        <Gmail>miguel@gmail.com</Gmail>
-        <pelicula Genero = "Fantasía" Duracion = "120" id_Sala ="1" id_Pelicula = "1">
-            <peliculaAVer>El regreso de Jaava</peliculaAVer>
-        </pelicula>
-        <cantidadAsientos>3</cantidadAsientos>
-        <Fecha>2024-02-08</Fecha>
-    </cliente>
-
-    <cliente idCliente = "6">
-        <Telefono>652910351</Telefono>
-        <Nombre>Emilio</Nombre>
-        <Apellido>Abichuela</Apellido>
-        <DNI>10238447A</DNI>
-        <Gmail>abichu@gmail.com</Gmail>
-        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="3" id_Pelicula = "11">
-            <peliculaAVer>El Wuekii</peliculaAVer>
-        </pelicula>
-        <cantidadAsientos>6</cantidadAsientos>
-        <Fecha>2024-02-04</Fecha>
-    </cliente>
-
-    <cliente idCliente = "7">
-        <Telefono>619926745</Telefono>
-        <Nombre>Luna</Nombre>
-        <Apellido>Perez</Apellido>
-        <DNI>44789135T</DNI>
-        <Gmail>luna@gmail.com</Gmail>
-        <pelicula Genero = "Thriller psicológico" Duracion = "150" id_Sala ="5" id_Pelicula = "5">
-            <peliculaAVer>Programación eterna</peliculaAVer>
-        </pelicula>
-        <cantidadAsientos>3</cantidadAsientos>
-        <Fecha>2024-02-05</Fecha>
-    </cliente>
-
-    <cliente idCliente = "8">
-        <Telefono>639910835</Telefono>
-        <Nombre>Erling</Nombre>
-        <Apellido>Haaland</Apellido>
-        <DNI>27729189S</DNI>
-        <Gmail>erling@gmail.com</Gmail>
-        <pelicula Genero = "Suspense" Duracion = "98" id_Sala ="6" id_Pelicula = "6">
-            <peliculaAVer>El gasto</peliculaAVer>
+    <cliente idCliente = "34">
+        <Telefono>609863401</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Clara</Nombre><!--Insertamos el nombre Clara-->
+        <Apellido>Navarro</Apellido><!--Insertamos el apellido Navarro-->
+        <DNI>98156329U</DNI><!--Insertamos el DNI-->
+        <Email>navarro@gmail.com</Email> <!--Insertamos el Correo-->
+        <pelicula Genero = "Drama" Duracion = "79" id_Sala ="8" id_Pelicula = "8"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El Break</peliculaAVer><!--Insertamos el nombre de la película-->
         </pelicula>
         <cantidadAsientos>4</cantidadAsientos>
-        <Fecha>2024-02-07</Fecha>
+        <Fecha>2024-02-03</Fecha><!--Insertamos la fecha-->
     </cliente>
 
-    <cliente idCliente = "9">
-        <Telefono>623091742</Telefono>
-        <Nombre>Sergio</Nombre>
-        <Apellido>Ramos</Apellido>
-        <DNI>57659201D</DNI>
-        <Gmail>mushoarte@gmail.com</Gmail>
-        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="3" id_Pelicula = "11">
-            <peliculaAVer>El Wuekii</peliculaAVer>
+    <cliente idCliente = "35">
+        <Telefono>+611826432</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Miguel</Nombre><!--Insertamos el nombre Miguel-->
+        <Apellido>Moreno</Apellido><!--Insertamos el apellido Moreno-->
+        <DNI>12973970V</DNI><!--Insertamos el DNI-->
+        <Email>miguel@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Fantasía" Duracion = "120" id_Sala ="1" id_Pelicula = "1"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El regreso de Jaava</peliculaAVer><!--Insertamos el nombre de la película-->
         </pelicula>
-        <cantidadAsientos>1</cantidadAsientos>
-        <Fecha>2024-02-06</Fecha>
+        <cantidadAsientos>3</cantidadAsientos><!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-08</Fecha><!--Insertamos la fecha-->
     </cliente>
 
-    <cliente idCliente = "10">
-        <Telefono>639830913</Telefono>
-        <Nombre>Alberto</Nombre>
-        <Apellido>Chicote</Apellido>
-        <DNI>88727112J</DNI>
-        <Gmail>croquetas@gmail.com</Gmail>
-        <pelicula Genero = "Terror" Duracion = "138" id_Sala ="4" id_Pelicula = "12">
-            <peliculaAVer>El trén de vuelta</peliculaAVer>
+    <cliente idCliente = "36">
+        <Telefono>652910351</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Emilio</Nombre><!--Insertamos el nombre Emilio-->
+        <Apellido>Abichuela</Apellido><!--Insertamos el apellido Abichuela-->
+        <DNI>10238447A</DNI><!--Insertamos el DNI-->
+        <Email>abichu@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="3" id_Pelicula = "11"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El Wuekii</peliculaAVer><!--Insertamos el nombre de la película-->
         </pelicula>
-        <cantidadAsientos>1</cantidadAsientos>
-        <Fecha>2024-02-09</Fecha>
+        <cantidadAsientos>6</cantidadAsientos><!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-04</Fecha><!--Insertamos la fecha-->
+    </cliente>
+
+    <cliente idCliente = "37">
+        <Telefono>619926745</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Luna</Nombre><!--Insertamos el nombre Luna-->
+        <Apellido>Perez</Apellido><!--Insertamos el apellido Perez-->
+        <DNI>44789135T</DNI><!--Insertamos el DNI-->
+        <Email>luna@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Thriller psicológico" Duracion = "150" id_Sala ="5" id_Pelicula = "5"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>Programación eterna</peliculaAVer><!--Insertamos el nombre de la película-->
+        </pelicula>
+        <cantidadAsientos>3</cantidadAsientos>
+        <Fecha>2024-02-05</Fecha><!--Insertamos la fecha-->
+    </cliente>
+
+    <cliente idCliente = "38">
+        <Telefono>639910835</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Erling</Nombre><!--Insertamos el nombre Erling-->
+        <Apellido>Haaland</Apellido><!--Insertamos el apellido Haaland-->
+        <DNI>27729189S</DNI><!--Insertamos el DNI-->
+        <Email>erling@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Suspense" Duracion = "98" id_Sala ="6" id_Pelicula = "6"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El gasto</peliculaAVer><!--Insertamos el nombre de la película-->
+        </pelicula>
+        <cantidadAsientos>4</cantidadAsientos><!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-07</Fecha><!--Insertamos la fecha-->
+    </cliente>
+
+    <cliente idCliente = "39">
+        <Telefono>623091742</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Sergio</Nombre><!--Insertamos el nombre Sergio-->
+        <Apellido>Ramos</Apellido><!--Insertamos el apellido Ramos-->
+        <DNI>57659201D</DNI><!--Insertamos el DNI-->
+        <Email>mushoarte@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Fantasía" Duracion = "84" id_Sala ="3" id_Pelicula = "11"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El Wuekii</peliculaAVer><!--Insertamos el nombre de la película-->
+        </pelicula>
+        <cantidadAsientos>1</cantidadAsientos><!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-06</Fecha><!--Insertamos la fecha-->
+    </cliente>
+
+    <cliente idCliente = "40">
+        <Telefono>639830913</Telefono><!--Insertamos el teléfono-->
+        <Nombre>Alberto</Nombre><!--Insertamos el nombre Alberto-->
+        <Apellido>Chicote</Apellido><!--Insertamos el apellido Chicote-->
+        <DNI>88727112J</DNI><!--Insertamos el DNI-->
+        <Email>croquetas@gmail.com</Email><!--Insertamos el Correo-->
+        <pelicula Genero = "Terror" Duracion = "138" id_Sala ="4" id_Pelicula = "12"><!--Insertamos los atributos de las películas incluyendo los id de sala , id pelicula,Genero y Duracion-->
+            <peliculaAVer>El trén de vuelta</peliculaAVer><!--Insertamos el nombre de la película-->
+        </pelicula>
+        <cantidadAsientos>1</cantidadAsientos><!--Insertamos la cantidad de asientos-->
+        <Fecha>2024-02-09</Fecha><!--Insertamos la fecha-->
     </cliente>
 
 
-</clientes>
+</clientes><!--Cerramos la etiqueta padre llamada clientes-->

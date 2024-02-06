@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1" xml:lang="es">
     <xs:element name="clientes">
+        <!--Encima de este comentario, introducimos la dos primeras líneas que debe tener nuestro archivo .xsd y debajo de las mismas, creamos el elemento padre llamado clientes-->
         <xs:complexType>
             <xs:sequence>
-                <xs:element name ="cliente" maxOccurs="unbounded">
+                <xs:element name ="cliente" maxOccurs="unbounded"> <!--Creamos el elemento clientes con el maxOccurs unbounded para poder introducir más de una etiqueta cliente en el xml-->
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name ="Telefono">
+                            <xs:element name ="Telefono"> <!--Creamos el elemento de Telefono-->
                                 <xs:simpleType>
-                                    <xs:restriction base ="xs:integer">
+                                    <xs:restriction base ="xs:integer"><!--Creamos una restricción tipo integer, tambien, el total de dígitos debe de ser 9-->
                                         <xs:totalDigits value="9"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name ="Nombre" type="xs:string"/>
+                            <xs:element name ="Nombre" type="xs:string"/>  <!--Creamos el elemento Nombre y Apellido de tipo String-->
                             <xs:element name ="Apellido" type="xs:string"/>
-                            <xs:element name ="DNI">
+                            <xs:element name ="DNI"><!--Creamos el elemento DNI-->
                                 <xs:simpleType>
-                                    <xs:restriction base = "xs:string">
+                                    <xs:restriction base = "xs:string"><!--Creamos una restricción tipo String y el patrón es el que tenemos que introducir para que concuerde con un DNI-->
                                         <xs:pattern value="[0-9]{8}[A-Z]"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name ="Gmail">
+                            <xs:element name ="Email"> <!--Creamos el elemento de Email-->
                                 <xs:simpleType>
-                                    <xs:restriction base = "xs:string">
+                                    <xs:restriction base = "xs:string"><!--Creamos una restricción tipo String y el patrón es el que tenemos que introducir para que concuerde con un Email-->
                                         <xs:pattern value = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name = "pelicula">
+                            <xs:element name = "pelicula"><!--Creamos el elemento de pelicula-->
                                 <xs:complexType>
                                     <xs:all>
-                                        <xs:element name = "peliculaAVer">
+                                        <xs:element name = "peliculaAVer"><!--Creamos el elemento de peliculaAVer e insertamos todos los nombres de las películas en una restricción tipo string y con varios enumeration-->
                                             <xs:simpleType>
                                                 <xs:restriction base = "xs:string">
                                                     <xs:enumeration value="El regreso de Jaava"/>
@@ -51,24 +52,24 @@
                                             </xs:simpleType>
                                         </xs:element>
                                     </xs:all>
-                                    <xs:attribute name ="Genero" type ="generoType" use ="required"/>
-                                    <xs:attribute name ="Duracion" type ="duracionType" use ="required"/>
-                                    <xs:attribute name ="id_Sala" type ="id_SalaType" use = "required"/>
-                                    <xs:attribute name ="id_Pelicula" type ="id_PeliculaType" use = "required"/>
+                                    <xs:attribute name ="Genero" type ="generoType" use ="required"/><!--Creamos el atributo llamado Genero y de uso requerido-->
+                                    <xs:attribute name ="Duracion" type ="duracionType" use ="required"/><!--Creamos el atributo llamado Duracion y de uso requerido-->
+                                    <xs:attribute name ="id_Sala" type ="id_SalaType" use = "required"/><!--Creamos el atributo llamado id_Sala y de uso requerido-->
+                                    <xs:attribute name ="id_Pelicula" type ="id_PeliculaType" use = "required"/><!--Creamos el atributo llamado id_Pelicula y de uso requerido-->
                                 </xs:complexType>
                             </xs:element>
 
-                            <xs:element name = "cantidadAsientos">
+                            <xs:element name = "cantidadAsientos"><!--Creamos el elemento de cantidadAsientos-->
                                 <xs:simpleType>
-                                    <xs:restriction base = "xs:integer">
+                                    <xs:restriction base = "xs:integer"><!--Creamos una restricción tipo integer, tambien,especificamos un minExclusive y un maxInclusive para indicar el mácimo y mínimo de los asientos disponibles-->
                                         <xs:minExclusive value="0"/>
                                         <xs:maxInclusive value="260"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name ="Fecha" type = "xs:date"/>
+                            <xs:element name ="Fecha" type = "xs:date"/><!--Añadimos el campo Fecha de tipo date-->
                         </xs:sequence>
-                        <xs:attribute name="idCliente" type ="idclienteType" use ="required"/>
+                        <xs:attribute name="idCliente" type ="idclienteType" use ="required"/><!--Creamos el atributo llamado idCLiente de uso requerido-->
                     </xs:complexType>
                 </xs:element>
                 
@@ -77,14 +78,14 @@
         </xs:complexType>
     </xs:element>
 
-
+<!--Añadimos las restricciones de cada type de los atributos antes mencionados-->
     <xs:simpleType name="idclienteType">
-        <xs:restriction base="xs:integer"> 
+        <xs:restriction base="xs:integer">  <!--Restricción tipo integer e indicamos con un minExclusive que el idCliente no puede ser 0 y tiene que ser mayor de eso-->
           <xs:minExclusive value="0"/>
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="generoType">
+    <xs:simpleType name="generoType"><!--Restricción tipo String e indicamos con una serie de enumeration con los géneros de las películas-->
         <xs:restriction base="xs:string"> 
           <xs:enumeration value="Terror"/>
           <xs:enumeration value="Fantasía"/>
@@ -97,22 +98,22 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="duracionType">
+    <xs:simpleType name="duracionType"> <!--Restricción tipo integer e indicamos con un minExclusive que el valor ha de ser mayor que 60-->
         <xs:restriction base="xs:integer"> 
           <xs:minInclusive value="60"/>
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="id_SalaType">
+    <xs:simpleType name="id_SalaType"><!--Restricción tipo integer e indicamos con un minExclusive y un maxInclusive que el valor tiene que ser mayor a 0 y menor o igual a 8-->
         <xs:restriction base="xs:integer"> 
-            <xs:minExclusive value="0"/>
-          <xs:maxInclusive value="12"/>
+          <xs:minExclusive value="0"/>
+          <xs:maxInclusive value="8"/>
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="id_PeliculaType">
+    <xs:simpleType name="id_PeliculaType"><!--Restricción tipo integer e indicamos con un minExclusive y un maxInclusive que el valor tiene que ser mayor a 0 y menor o igual a 12-->
         <xs:restriction base="xs:integer"> 
-            <xs:minExclusive value="0"/>
+          <xs:minExclusive value="0"/>
           <xs:maxInclusive value="12"/>
         </xs:restriction>
     </xs:simpleType>

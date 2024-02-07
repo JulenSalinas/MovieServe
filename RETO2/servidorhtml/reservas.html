@@ -6,7 +6,7 @@
     <title>Reservas</title>
     <meta charset = "utf-8"/> 
     <link rel = "icon" href =  
-    "\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" 
+    "LogoMovieServe.png" 
             type = "image/x-icon"> 
             <style>
                 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -175,7 +175,34 @@
   a{
     color:white
   }
+  .form-row {
+            position: relative;
+        }
 
+        .input-data input[type="date"] {
+            padding-top: 15px; /* Ajuste para la altura del campo de fecha */
+        }
+
+        .input-data label {
+            position: absolute;
+            pointer-events: none;
+            bottom: 45px; /* Ajuste para la posición de la etiqueta de fecha */
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+  .horario a{
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  .submit-btn .input-data {
+    overflow: hidden;
+    height: 50px!important; 
+    width: 500px!important;
+
+}
  </style>
 </head>
 <body>
@@ -191,63 +218,64 @@
     }
 
 </script>
-    <div class="Logo">
-        <img src="\RETO2\HTML MovieServe\imágenes/LogoMovieServe.png" alt="Logo de MovieServe">
+    <div class="Logo"> <!--clase en la que se encuentra el logo-->
+        <img src="LogoMovieServe.png" alt="Logo de MovieServe">
     </div>
     
       
-    <div class="menu">
+    <div class="menu"> <!--clase donde estan los accesos al resto de paginas-->
             
         <li><a href="index.html" class="menu-item">Inicio</a></li>
         <br>
         <li><a href="cartelera.html" class="menu-item">Cartelera</a></li>
+        <br>
         <li><a href="ayuda.html" class="menu-item">Ayuda</a></li>
     </div>
 
-<div class="container">
+<div class="container"> <!--clase donde se encuentra todo el formulario-->
     <div class="text">
-       ¡Reserva ya para ver tu página favorita!
+       ¡Reserva ya para ver tu película favorita!
     </div>
-    <form name="formulario" method="get" action="http://192.168.1.18/reservar.php" onsubmit="return validarFormulario()">
+    <form name="formulario" method="get" action="reservar.php" onsubmit="return validarFormulario()"> <!--esto conecta el formulario con el archivo reservar.php-->
        <div class="form-row">
         <input type="hidden" name="db" value ="movieserve">
         <input type="hidden" name="table" value ="clientes">
         <input type="hidden" name="idCliente">
-          <div class="input-data">
+          <div class="input-data"> <!--en este div esta el campo telefono del formulario-->
              <input type="text" name = "Telefono"required>
              <div class="underline"></div>
              <label for="">Telefono</label>
           </div>
-          <div class="input-data">
+          <div class="input-data"><!--en este div esta el campo nombre del formulario-->
              <input type="text" name = "Nombre" required>
              <div class="underline"></div>
              <label for="">Nombre</label>
           </div>
        </div>
        <div class="form-row">
-          <div class="input-data">
+          <div class="input-data"><!--en este div esta el campo apellido del formulario-->
              <input type="text" name = "Apellido" required>
              <div class="underline"></div>
              <label for="">Apellido</label>
           </div>
-          <div class="input-data">
+          <div class="input-data"><!--en este div esta el campo DNI del formulario-->
              <input type="text" name = "DNI" required>
              <div class="underline"></div>
              <label for="">DNI</label>
           </div>
        </div>
        <div class="form-row">
-        <div class="input-data">
-           <input type="text" name = "Gmail" required>
+        <div class="input-data"><!--en este div esta el campo email del formulario-->
+           <input type="text" name = "Email" required>
            <div class="underline"></div>
-           <label for="">Gmail</label>
+           <label for="">Email</label>
         </div>
         <div class="input-data">
           <br>
            <div class="underline"></div>
-           <label for="peliculaAVer">Película a Ver:</label>
+           <label for="peliculaAVer">Película a Ver:</label><!--en este label esta el campo de las peliculas que hay en el formulario-->
            <select id="peliculaAVer" name="peliculaAVer">
-       
+              <!-- aqui aparecen todas las opciones que hay-->
            <option value="El regreso de Jaava">El regreso de Jaava</option>
            <option value="La BakQ perdida">La BakQ perdida</option>
            <option value="Las aventuras de Inti: El duende de Garbera">Las aventuras de Inti: El duende de Garbera</option>
@@ -260,34 +288,44 @@
            <option value="El arte de la doma clásica">El arte de la doma clásica</option>
            <option value="El Wuekii">El Wuekii</option>
            <option value="El trén de vuelta">El trén de vuelta</option>
-         
+            
         </select> 
         </div>
      </div>
+     
      <div class="form-row">
-        <div class="input-data">
-            <input type="hidden" name="id_Sala">
-            <input type="hidden" name="id_Pelicula>
-           <div class="underline"></div>
-        
-        </div>
-       <div class="form-row">
-       <div class="input-data textarea">
-        
-         
-          <br/>
-          <input type="interger" name = "cantidadAsientos" required>
+      <div class="input-data"><!--en este div esta el campo cantidad de asientos del formulario-->
+          <input type="number" name="cantidadAsientos" required>
           <div class="underline"></div>
           <label for="">Cantidad de Asientos:</label>
-          <br/>
-          
-    </form>
+      </div>
+  </div>
+
+  <div class="form-row">
+    <div class="input-data"><!--en este div esta el campo fecha del formulario-->
+        <input type="date" name="Fecha" required>
+        <div class="underline"></div>
+        <label for="Fecha">Fecha</label>
     </div>
-    <div class="form-row submit-btn">
-        <div class="input-data">
-           <div class="inner" ></div>
-           <input type="submit" value="Validar">
-        </div>
-     </div>
+</div>
+<div class="form-row submit-btn">
+  <div class="input-data">
+      <div class="inner"></div><!--en este div esta el boton de comprar del formulario-->
+      <input type="submit" value="Comprar">
+  </div>
+</div>
+  <div class="horario"><!--en este div esta el link para ver el horario del cine-->
+      <a href="https://drive.google.com/file/d/1aykNRaxzo50NeebBvch9_e77tLnpxJ51/view?usp=sharing"><b>Horario</b></a>
+  </div>
+
+  
+     <div class="form-row">
+      <div class="input-data">
+          <input type="hidden" name="id_Sala">
+          <input type="hidden" name="id_Pelicula">
+         <div class="underline"></div>
+      </div>
+      <br>
+    </form>
 </body>
 </html>

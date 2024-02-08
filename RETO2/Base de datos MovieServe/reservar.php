@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $id_Sala = 2;
             break;
         case "Las aventuras de Inti: El duende de Garbera":
-            $id_Pelicula = 3;
+            $id_Sala = 3;
             break;
         case "Tamayo: El escape":
             $id_Sala = 4;

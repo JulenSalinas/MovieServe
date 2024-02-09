@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ayuda MovieServe</title>
+        <meta charset = "utf-8"/> 
+        <link rel = "icon" href = "LogoMovieServe.png" type = "image/x-icon"> 
+        <style>
+            body {
+                background-color: #fff;
+                color: #000;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 90%;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .Logo {
+                text-align: center;
+                grid-column: 1/1;
+                grid-row: 1/1;
+                padding: 20px;
+                border: 3px solid #000000;
+                background-image: url('cine5.jpg');
+            }
+
+            .Logo img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .menu {
+                background-color: #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .menu-item {
+                padding: 10px 20px;
+                text-decoration: none;
+                color: #fff;
+                transition: background-color 0.6s ease;
+            }
+
+            .menu-item:hover {
+                background-color: #8a8989;
+            }
+
+        
+            footer{
+                background-color: #000;
+                color: #fff;
+                padding: 10px;
+                padding-bottom: 1px;
+                text-align: center;
+            }
+        
+
+            .contenido{
+        
+                flex: 1;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            
+            
+            }
+        
+            .titulo{
+                border: 2px solid black;
+            }
+            .izquierda{  
+                float: left;
+                width: 50%;
+            }
+
+        
+            .contenido p{
+                font-family: monospace;
+            }
+
+            .preguntas{
+                border:2px solid  rgba(255, 255, 255,1); 
+                background: linear-gradient(rgb(255, 89, 214), rgb(240, 240, 240));
+            }
+            
+        
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            
+            <div class="Logo"> <!--clase en la que se encuentra el logo-->
+                <img src="LogoMovieServe.png" alt="Logo de MovieServe">
+            </div>
+
+            <div class="menu"> <!--clase donde estan los accesos al resto de paginas-->
+                <a href="index.html" class="menu-item">Inicio</a>
+                <a href="cartelera.html" class="menu-item">Cartelera</a>
+                <a href="reservas.html" class="menu-item">Reservas</a>
+                
+            </div>
+
+            <div class="contenido"> <!--clase donde se encuentra el contenido de la pagina-->
+                <div class="titulo">
+                    <h2>PREGUNTAS FRECUENTES</h2>
+                </div>
+                    <div class="preguntas"><!--clase donde se encuentran todas las preguntas-->
+                        <div class="izquierda"><!--clase donde se encuentran las preguntas de la parte izquierda-->
+                            <h4><u>¿Puedo cambiar o cancelar mi entrada de cine?</u></h4>
+                            <p>Puedes cambiar o cancelar la entrada sin problemas hasta 2 horas antes de que empiece la película.</p>
+
+                            <h4><u>¿Tengo que imprimir la entrada?</u></h4>
+                            <p>No es necesario, ya que, tenemos disponibles máquinas de lectura de QR.</p>
+
+                            <h4><u>¿Qué hago si no he recibido el correo de confirmación?</u></h4>
+                            <p>Al registrarte en nuestra web queda registrado tu historial de compra en donde podemos acceder fácilmente.</p>
+
+                            <h4><u>¿Qué tipos de sala hay?</u></h4>
+                            <p>En MovieServe tenemos 10 salas diferentes, 2 grandes y 8 pequeñas con una capacidad cada una de 260. Dentro de ellas tenemos disponibles diferentes formatos premium como sala Dolby, IMAX, iSense, ScreenX y DBOX.</p>
+
+                            <h4><u>¿Si es mi cumpleaños tengo algún descuento?</u></h4>
+                            <p>El mes de tu cumpleaños tendrás disponible un 25% de descuento para ti y tus amigos. Además de poder adquirir un cubo de palomitas pequeño GRATIS.</p>
+                        </div>
+
+                        <div class="derecha"><!--clase donde se encuentran las preguntas de la parte derecha-->
+                            <h4><u>¿Puedo alquilar alguna sala para un evento privado ?</u></h4>
+                            <p>Se puede alquilar una sala con la suficiente antelación de la reserva.</p>
+
+                            <h4><u>¿Puedo entrar con comida y bebida al cine?</u></h4>
+                            <p>Se puede entrar con comida de fuera, también contamos con nuestra propia tienda de alimentos.</p>
+
+                            <h4><u>¿Es apta para la accesibilidad de clientes con movilidad reducida?</u></h4>
+                            <p>Las instalaciones están aptas para las personas con movilidad reducida contamos con ascensores para ellos, en  las salas tienen su propia zona especial.</p>
+
+                            <h4><u>¿Puedo llevar a mi perro a ver la película?</u></h4>
+                            <p>Por respeto a los demás usuarios, no aceptamos perros que no sean de apoyo.</p>
+
+                            <h4><u>¿Si no funciona mi código de entrada puedes acceder de otra manera?</u></h4>
+                            <p>Si en caso de no funcionar el código, desde nuestra web podemos confirmar que es válido viendo su cuenta.</p>
+                        </div>
+
+                    </div>
+            
+            </div>
+            
+                <footer><!--footer con el simbolo de copyright y el slogan-->
+                    <p>&copy; MovieServe, Reserva y Ven</p>
+                </footer>
+
+    </body>
+</html>

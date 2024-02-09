@@ -1,0 +1,10 @@
+El proyecto está estructurado en carpetas la mayoría de estas en base a las asignaturas:
+- Base de datos MovieServe (El diagrama,Tablas,archivo.sql y el archivo php)
+- Documentación MovieServe (La portada del documento y el propio documento)
+- English MovieServe (Los dos videos de la asignatura)
+- FOL (La nómina, las tablas de los riesgos laborales y peligros identificados, la documentación incluyendo el plan de prevención y dos protocolos de prevención en formato word y pdf)
+- HTMLMovieServe (Dentro una carpeta llamada páginas, en ella podemos encontrar todas los archivos .html y sus imágenes)
+- Historial de par de claves (Las distintas par de claves que hemos ido realizando hasta poder emplear una de estas en nuestro servidor)
+- Java (En la carpeta MovieServe podemos ver todo el proyecto de java(.java , .class y la librería empleada), En la carpeta JavaDoc podemos los JavaDoc generados para cada uno de los archivos .Java de ventana gráfica, Por último, tenemos la carpeta de versiones anteriores de algunos de los archivos .Java de ventana gráfica)
+- LogoMovieServe(Una imagen del logo de nuestra empresa)
+-XSD Y XML (El esquema XSD y el archivo XML con ejemplos de nuestras reservas en la base de datos)
